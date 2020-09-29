@@ -23,13 +23,11 @@ jobs:
           env:
             BROWSER: chrome
             ROBOT_TESTS_DIR: ${{github.workspace}}/e2e/tests
-            # ROBOT_REPORTS_DIR: ${{github.workspace}}/reports
         - name: Upload test results
           uses: actions/upload-artifact@v1
-          if: always()
           with:
             name: reports
-            path: /opt/robotframework/reports
+            path: /opt/robotframework/reports/*.*
     # deploy_to_heroku:
     #     runs-on: ubuntu-latest
     #     name: Deploy to Heroku
