@@ -25,6 +25,7 @@ jobs:
             ROBOT_TESTS_DIR: ${{github.workspace}}/e2e/tests
         - name: Upload test results
           uses: actions/upload-artifact@v1
+          if: always()
           with:
             name: reports
             path: /opt/robotframework/reports/*.*
