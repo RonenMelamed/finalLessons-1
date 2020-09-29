@@ -22,14 +22,14 @@ jobs:
           uses: joonvena/robotframework-docker-action@v0.1
           env:
             BROWSER: chrome
-            ROBOT_TESTS_DIR: e2e/tests
-            ROBOT_REPORTS_DIR: reports/
+            ROBOT_TESTS_DIR: ${{github.workspace}}/e2e/tests
+            ROBOT_REPORTS_DIR: ${{github.workspace}}/reports
         - name: Upload test results
           uses: actions/upload-artifact@v1
           if: always()
           with:
             name: reports
-            path: reports
+            path: ${{github.workspace}}/reports
     # deploy_to_heroku:
     #     runs-on: ubuntu-latest
     #     name: Deploy to Heroku
