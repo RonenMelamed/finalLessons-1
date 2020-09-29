@@ -27,7 +27,7 @@ jobs:
           run: |
             docker run \
               -v ${PWD}/reports:/opt/robotframework/reports:Z \
-              -v ${PWD}/tasks:/opt/robotframework/tests:Z \
+              -v ${PWD}/e2e/tests:/opt/robotframework/tests:Z \
               -v ${PWD}/reports/file://opt/robotframework/temp/reports/file/ \
               --user $(id -u):$(id -g) \
               ppodgorsek/robot-framework:latest
