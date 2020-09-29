@@ -12,7 +12,7 @@ on:
 
 # A workflow  run is made up of one or more jobs that can run sequentially or in parallel
 jobs:       
-    robot_test2:
+    robot_test:
       runs-on: ubuntu-latest
       name: Run Robot Framework Tests
       steps:
@@ -23,10 +23,18 @@ jobs:
           env:
             BROWSER: chrome
             ROBOT_TESTS_DIR: e2e/tests
-            ROBOT_REPORTS_DIR: ${{ github.workspace }}/e2e/reports
+            ROBOT_REPORTS_DIR: reports/
         - name: Upload test results
           uses: actions/upload-artifact@v1
           if: always()
           with:
             name: reports
-            path: ${{ github.workspace }}/reports
+            path: reports
+    # deploy_to_heroku:
+    #     runs-on: ubuntu-latest
+    #     name: Deploy to Heroku
+    #     steps:
+    #         - name: Checkout
+    #           uses: actions/checkout@v2
+    #         - name: Deploy
+    #           uses: 
