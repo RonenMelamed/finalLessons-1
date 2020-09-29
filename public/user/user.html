@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="user.css">
+    <title>User Profile </title>
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button type="button" class="btn btn-dark" id="logout_btn">Logout</button>
+    <button type="button" class="btn btn-dark" id="edit_teacher_profile">Profile</button>
+    <a class="navbar-brand" href="#"></a>
+    <img
+      src="https://p1.hiclipart.com/preview/213/1021/220/google-logo-background-teacher-school-education-student-world-teachers-day-learning-teacher-education-png-clipart.jpg"
+      width="50" height="50" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" type="button" id="move_to_main">Home <span class="sr-only">(current)</span></a>
+        </li>
+        
+        
+        
+      </ul>
+
+
+    </div>
+  </nav>
+
+   <!-- form starts here -->
+  <h1 class="page_title" >My Profile</h1>
+  <div class="container">
+      <div class="row info">
+        <div class="col-sm-12 info">
+          <label >Name:</label> <p id=nameInfo></p>
+          <label for="exampleInputEmail1">Email address:</label> <p id=email></p>
+          <label for="exampleInputEmail1">Skype ID:</label> <p id=skype></p>
+          <label for="exampleInputEmail1">Booked lessons:</label> <p id=skype></p>
+          <ul class="list-group">
+          </ul>
+      </div>
+    </div>
+
+      <div class="row update">
+          <div class="col-sm-12 info">
+            <div class="form-group">
+              <h3 class="update_details">update details</h3>
+              <label for="exampleInputPassword1">Name</label>
+              <input  class="form-control" id="nameInput" placeholder="Enter name here">
+             </div>
+       
+       
+           
+           <div class="form-group">
+              <label for="exampleInputPassword1">Skype ID</label>
+              <input  class="form-control" id="skype_id" placeholder="Put your skype ID">
+           </div>
+            
+              
+       
+           <button  type="submit" class="btn btn-primary" id="updt"  >Update</button>
+        </div>
+      
+    </div>
+  </div>
+   
+
+
+  
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDK4qhU1AS70B-WRCBlj8APdydM6HqWMdw",
+    authDomain: "private-lessons-91162.firebaseapp.com",
+    databaseURL: "https://private-lessons-91162.firebaseio.com",
+    projectId: "private-lessons-91162",
+    storageBucket: "private-lessons-91162.appspot.com",
+    messagingSenderId: "248711451640",
+    appId: "1:248711451640:web:4a1c14c08f09f836f2bc0d",
+    measurementId: "G-BY1M0TGB47"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="user.js" charset="utf-8"></script>
+
+
+  </body>
+</html>

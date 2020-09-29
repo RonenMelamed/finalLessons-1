@@ -1,0 +1,4 @@
+email address: avodacasha@gmail.com
+password: Ihatecs123
+
+password for heroku: Ihatecs123@

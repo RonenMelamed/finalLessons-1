@@ -1,0 +1,92 @@
+
+.row.profile{
+    margin: 20px;
+    background-color: #d0e1e1;
+  }
+
+  .page_title{
+  	text-align: center;
+    margin-top: 80px;
+    font-family:  cursive;
+    font-size: 90px;
+    
+  }
+
+.col-sm-6.profile > *{
+    margin: 8px;
+}
+
+.col-sm-2.profile{
+    margin: 20px;
+}
+
+.row.about_me{
+    margin: 20px;
+    background-color: #d0e1e1;
+  }
+  .row.calender{
+      margin: 20px;
+      background-color: #d0e1e1;
+    }
+    .row.reviwes{
+        margin: 20px;
+        background-color: #d0e1e1;
+      }
+
+      .dropdown-menu{
+        height:200px;
+        overflow-y:auto;
+     }
+
+    .glyphicon{
+      background-color: #99bbff;
+      width: 30%;
+
+    }
+
+    li:hover {
+        background-color:#3480eb;
+    }
+
+  td, th{
+    border: 2px solid;
+    /* padding: 10px; */
+    width: 80px;
+    height:60px;
+  }
+
+.booking_calneder{
+  /* table-layout: fixed; */
+  width: 900px;
+  height:500px;
+  overflow-y:auto;
+}
+
+.calender_btn{
+  width: 100%;
+  height:100%;
+  border: none;
+  background-color:  rgb(194, 194, 163);
+}
+
+.hours_cells{
+  text-align: center;
+}
+
+.days_cells{
+  text-align: center;
+}
+
+.dates_cells{
+  text-align: center;
+}
+
+#date_left{
+  text-align: center;
+}
+
+#save_btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

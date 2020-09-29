@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="teacher.css">
+
+  <title>teacher page</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button type="button" class="btn btn-dark" id="logout_btn">Logout</button>
+    <button type="button" class="btn btn-dark" id="edit_teacher_profile">Profile</button>
+    <a class="navbar-brand" href="#"></a>
+    <img
+      src="https://p1.hiclipart.com/preview/213/1021/220/google-logo-background-teacher-school-education-student-world-teachers-day-learning-teacher-education-png-clipart.jpg"
+      width="50" height="50" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" type="button" id="move_to_main">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="page_title">teacher page</h1>
+
+  <div class="container">
+    <div class="row profile">
+
+
+      <div class="col-sm-2 profile">
+        <form action="/action_page.php">
+          <input type="file" id="myPhoto" name="filename" hidden="hidden">
+          <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="nothing chosen!!!"  id="profile_img" width="140" height="140">
+          <button type="button" class="btn btn-primary" id="upload_image_btn">upload image</button>
+      </form>
+      </div>
+      <div class="col-sm-6 profile">
+
+
+
+        <h5 class="profile_title">Profile</h5>
+        <label>Name:</label>
+        <textarea class="Name" rows="1" placeholder="Name" style="width: 100%" id="Name"></textarea>
+        <div class="dropdown" id="Home_country">
+          <form>
+            <label>Home Country:</label>
+            <select class="home_country" id="homeCountry">
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Aruba">Aruba</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas, The">Bahamas, The</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Brazil">Brazil</option>
+              <option value="British Virgin Is.">British Virgin Is.</option>
+              <option value="Brunei">Brunei</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burma">Burma</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Canada">Canada</option>
+              <option value="Cape Verde">Cape Verde</option>
+              <option value="Cayman Islands">Cayman Islands</option>
+              <option value="Central African Rep.">Central African Rep.</option>
+              <option value="Chad">Chad</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo, Dem. Rep.">Congo, Dem. Rep.</option>
+              <option value="Congo, Repub. of the">Congo, Repub. of the</option>
+              <option value="Cook Islands">Cook Islands</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Czech Republic">Czech Republic</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Dominica">Dominica</option>
+              <option value="Dominican Republic">Dominican Republic</option>
+              <option value="East Timor">East Timor</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Faroe Islands">Faroe Islands</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="French Guiana">French Guiana</option>
+              <option value="French Polynesia">French Polynesia</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Gaza Strip">Gaza Strip</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Gibraltar">Gibraltar</option>
+              <option value="Greece">Greece</option>
+              <option value="Greenland">Greenland</option>
+              <option value="Grenada">Grenada</option>
+              <option value="Guadeloupe">Guadeloupe</option>
+              <option value="Guam">Guam</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Guernsey">Guernsey</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guinea-Bissau">Guinea-Bissau</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Hong Kong">Hong Kong</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Iceland">Iceland</option>
+              <option value="India">India</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Iran">Iran</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Isle of Man">Isle of Man</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japan">Japan</option>
+              <option value="Jersey">Jersey</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Kiribati">Kiribati</option>
+              <option value="Korea, North">Korea, North</option>
+              <option value="Korea, South">Korea, South</option>
+              <option value="Kuwait">Kuwait</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Laos">Laos</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libya">Libya</option>
+              <option value="Liechtenstein">Liechtenstein</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Macau">Macau</option>
+              <option value="Macedonia">Macedonia</option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Mali">Mali</option>
+              <option value="Malta">Malta</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+              <option value="Martinique">Martinique</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mayotte">Mayotte</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Micronesia, Fed. St.">Micronesia, Fed. St.</option>
+              <option value="Moldova">Moldova</option>
+              <option value="Monaco">Monaco</option>
+              <option value="Mongolia">Mongolia</option>
+              <option value="Montserrat">Montserrat</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Nauru">Nauru</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Netherlands Antilles">Netherlands Antilles</option>
+              <option value="New Caledonia">New Caledonia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="N. Mariana Islands">N. Mariana Islands</option>
+              <option value="Norway">Norway</option>
+              <option value="Oman">Oman</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palau">Palau</option>
+              <option value="Panama">Panama</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Puerto Rico">Puerto Rico</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Reunion">Reunion</option>
+              <option value="Romania">Romania</option>
+              <option value="Russia">Russia</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Saint Helena">Saint Helena</option>
+              <option value="Saint Kitts & Nevis">Saint Kitts & Nevis</option>
+              <option value="Saint Lucia">Saint Lucia</option>
+              <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+              <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+              <option value="Samoa">Samoa</option>
+              <option value="San Marino">San Marino</option>
+              <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Serbia">Serbia</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="Solomon Islands">Solomon Islands</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Swaziland">Swaziland</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syria">Syria</option>
+              <option value="Taiwan">Taiwan</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Tanzania">Tanzania</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Togo">Togo</option>
+              <option value="Tonga">Tonga</option>
+              <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+              <option value="Tuvalu">Tuvalu</option>
+              <option value="Uganda">Uganda</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Arab Emirates">United Arab Emirates</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Vanuatu">Vanuatu</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Virgin Islands">Virgin Islands</option>
+              <option value="Wallis and Futuna">Wallis and Futuna</option>
+              <option value="West Bank">West Bank</option>
+              <option value="Western Sahara">Western Sahara</option>
+              <option value="Yemen">Yemen</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+
+            </select>
+          </form>
+
+        </div>
+
+        <div class="dropdown" id="Languages_I_teach">
+          <div class="glyphicon glyphicon-filter dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Languages I teach</div>
+          <!-- modal -->
+          <ul class="dropdown-menu" role="menu">
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Acholi">Acholi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Afrikaans">Afrikaans</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Akan">Akan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Albanian">Albanian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Amharic">Amharic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Arabic">Arabic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Ashante">Ashante</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Asl">Asl</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Assyrian">Assyrian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Azerbaijani">Azerbaijani</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Azeri">Azeri</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Bajuni">Bajuni</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Basque">Basque</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Behdini">Behdini</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Belorussian">Belorussian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Bengali">Bengali</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Berber">Berber</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Bosnian">Bosnian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Bravanese">Bravanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Bulgarian">Bulgarian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Burmese">Burmese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Cakchiquel">Cakchiquel</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Cambodian">Cambodian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Cantonese">Cantonese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Catalan">Catalan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Chaldean">Chaldean</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Chamorro">Chamorro</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Chao-chow">Chao-chow</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Chavacano">Chavacano</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Chin">Chin</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Chuukese">Chuukese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Cree">Cree</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Croatian">Croatian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Czech">Czech</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Dakota">Dakota</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Danish">Danish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Dari">Dari</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Dinka">Dinka</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Diula">Diula</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Dutch">Dutch</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Edo">Edo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="English">English</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Estonian">Estonian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Ewe">Ewe</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Fante">Fante</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Farsi">Farsi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Fijian Hindi">Fijian Hindi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Finnish">Finnish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Flemish">Flemish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="French">French</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="French Canadian">French Canadian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Fukienese">Fukienese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Fula">Fula</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Fulani">Fulani</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Fuzhou">Fuzhou</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Ga">Ga</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Gaddang">Gaddang</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Gaelic">Gaelic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Gaelic-irish">Gaelic-irish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Gaelic-scottish">Gaelic-scottish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Georgian">Georgian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="German">German</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Gorani">Gorani</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Greek">Greek</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Gujarati">Gujarati</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Haitian Creole">Haitian Creole</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Hakka">Hakka</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Hakka-chinese">Hakka-chinese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Hausa">Hausa</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Hebrew">Hebrew</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Hindi">Hindi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Hmong">Hmong</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Hungarian">Hungarian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Ibanag">Ibanag</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Ibo">Ibo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Icelandic">Icelandic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Igbo">Igbo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Ilocano">Ilocano</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Indonesian">Indonesian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Inuktitut">Inuktitut</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Italian">Italian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Jakartanese">Jakartanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Japanese">Japanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Javanese">Javanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kanjobal">Kanjobal</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Karen">Karen</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Karenni">Karenni</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kashmiri">Kashmiri</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kazakh">Kazakh</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kikuyu">Kikuyu</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kinyarwanda">Kinyarwanda</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kirundi">Kirundi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Korean">Korean</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kosovan">Kosovan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kotokoli">Kotokoli</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Krio">Krio</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kurdish">Kurdish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kurmanji">Kurmanji</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Kyrgyz">Kyrgyz</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Lakota">Lakota</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Laotian">Laotian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Latvian">Latvian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Lingala">Lingala</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Lithuanian">Lithuanian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Luganda">Luganda</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Luo">Luo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Maay">Maay</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Macedonian">Macedonian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Malay">Malay</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Malayalam">Malayalam</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Maltese">Maltese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Mandarin">Mandarin</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Mandingo">Mandingo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Mandinka">Mandinka</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Marathi">Marathi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Marshallese">Marshallese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Mien">Mien</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Mina">Mina</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Mirpuri">Mirpuri</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Mixteco">Mixteco</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Moldavan">Moldavan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Mongolian">Mongolian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Montenegrin">Montenegrin</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Navajo">Navajo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Neapolitan">Neapolitan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Nepali">Nepali</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Nigerian Pidgin">Nigerian Pidgin</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Norwegian">Norwegian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Oromo">Oromo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Pahari">Pahari</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Papago">Papago</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Papiamento">Papiamento</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Pashto">Pashto</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Patois">Patois</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Pidgin English">Pidgin English</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Polish">Polish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Portug.creole">Portug.creole</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Portuguese">Portuguese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Pothwari">Pothwari</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Pulaar">Pulaar</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Punjabi">Punjabi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Putian">Putian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Quichua">Quichua</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Romanian">Romanian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Russian">Russian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Samoan">Samoan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Serbian">Serbian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Shanghainese">Shanghainese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Shona">Shona</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Sichuan">Sichuan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Sicilian">Sicilian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Sinhalese">Sinhalese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Slovak">Slovak</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Somali">Somali</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Sorani">Sorani</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Spanish">Spanish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Sudanese Arabic">Sudanese Arabic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Sundanese">Sundanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Susu">Susu</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Swahili">Swahili</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Swedish">Swedish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Sylhetti">Sylhetti</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Tagalog">Tagalog</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Taiwanese">Taiwanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Tajik">Tajik</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Tamil">Tamil</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Telugu">Telugu</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Thai">Thai</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Tibetan">Tibetan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Tigre">Tigre</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Tigrinya">Tigrinya</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Toishanese">Toishanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Tongan">Tongan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Toucouleur">Toucouleur</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Trique">Trique</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Tshiluba">Tshiluba</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Turkish">Turkish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Twi">Twi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Ukrainian">Ukrainian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Urdu">Urdu</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Uyghur">Uyghur</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Uzbek">Uzbek</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Vietnamese">Vietnamese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Visayan">Visayan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Welsh">Welsh</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Wolof">Wolof</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Yiddish">Yiddish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Yoruba">Yoruba</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="teach" value="Yupik">Yupik</label></li>
+          </ul>
+        </div>
+
+        <div class="dropdown" id="Also_speak">
+          <div class="glyphicon glyphicon-filter dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Also speak</div>
+          <!-- modal -->
+          <ul class="dropdown-menu" role="menu">
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Acholi">Acholi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Afrikaans">Afrikaans</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Akan">Akan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Albanian">Albanian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Amharic">Amharic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Arabic">Arabic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Ashante">Ashante</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Asl">Asl</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Assyrian">Assyrian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Azerbaijani">Azerbaijani</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Azeri">Azeri</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Bajuni">Bajuni</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Basque">Basque</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Behdini">Behdini</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Belorussian">Belorussian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Bengali">Bengali</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Berber">Berber</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Bosnian">Bosnian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Bravanese">Bravanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Bulgarian">Bulgarian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Burmese">Burmese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Cakchiquel">Cakchiquel</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Cambodian">Cambodian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Cantonese">Cantonese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Catalan">Catalan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Chaldean">Chaldean</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Chamorro">Chamorro</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Chao-chow">Chao-chow</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Chavacano">Chavacano</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Chin">Chin</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Chuukese">Chuukese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Cree">Cree</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Croatian">Croatian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Czech">Czech</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Dakota">Dakota</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Danish">Danish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Dari">Dari</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Dinka">Dinka</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Diula">Diula</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Dutch">Dutch</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Edo">Edo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="English">English</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Estonian">Estonian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Ewe">Ewe</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Fante">Fante</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Farsi">Farsi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Fijian Hindi">Fijian Hindi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Finnish">Finnish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Flemish">Flemish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="French">French</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="French Canadian">French Canadian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Fukienese">Fukienese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Fula">Fula</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Fulani">Fulani</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Fuzhou">Fuzhou</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Ga">Ga</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Gaddang">Gaddang</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Gaelic">Gaelic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Gaelic-irish">Gaelic-irish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Gaelic-scottish">Gaelic-scottish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Georgian">Georgian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="German">German</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Gorani">Gorani</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Greek">Greek</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Gujarati">Gujarati</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Haitian Creole">Haitian Creole</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Hakka">Hakka</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Hakka-chinese">Hakka-chinese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Hausa">Hausa</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Hebrew">Hebrew</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Hindi">Hindi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Hmong">Hmong</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Hungarian">Hungarian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Ibanag">Ibanag</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Ibo">Ibo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Icelandic">Icelandic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Igbo">Igbo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Ilocano">Ilocano</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Indonesian">Indonesian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Inuktitut">Inuktitut</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Italian">Italian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Jakartanese">Jakartanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Japanese">Japanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Javanese">Javanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kanjobal">Kanjobal</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Karen">Karen</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Karenni">Karenni</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kashmiri">Kashmiri</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kazakh">Kazakh</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kikuyu">Kikuyu</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kinyarwanda">Kinyarwanda</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kirundi">Kirundi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Korean">Korean</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kosovan">Kosovan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kotokoli">Kotokoli</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Krio">Krio</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kurdish">Kurdish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kurmanji">Kurmanji</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Kyrgyz">Kyrgyz</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Lakota">Lakota</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Laotian">Laotian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Latvian">Latvian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Lingala">Lingala</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Lithuanian">Lithuanian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Luganda">Luganda</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Luo">Luo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Maay">Maay</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Macedonian">Macedonian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Malay">Malay</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Malayalam">Malayalam</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Maltese">Maltese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Mandarin">Mandarin</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Mandingo">Mandingo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Mandinka">Mandinka</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Marathi">Marathi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Marshallese">Marshallese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Mien">Mien</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Mina">Mina</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Mirpuri">Mirpuri</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Mixteco">Mixteco</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Moldavan">Moldavan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Mongolian">Mongolian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Montenegrin">Montenegrin</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Navajo">Navajo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Neapolitan">Neapolitan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Nepali">Nepali</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Nigerian Pidgin">Nigerian Pidgin</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Norwegian">Norwegian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Oromo">Oromo</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Pahari">Pahari</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Papago">Papago</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Papiamento">Papiamento</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Pashto">Pashto</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Patois">Patois</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Pidgin English">Pidgin English</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Polish">Polish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Portug.creole">Portug.creole</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Portuguese">Portuguese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Pothwari">Pothwari</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Pulaar">Pulaar</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Punjabi">Punjabi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Putian">Putian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Quichua">Quichua</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Romanian">Romanian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Russian">Russian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Samoan">Samoan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Serbian">Serbian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Shanghainese">Shanghainese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Shona">Shona</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Sichuan">Sichuan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Sicilian">Sicilian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Sinhalese">Sinhalese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Slovak">Slovak</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Somali">Somali</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Sorani">Sorani</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Spanish">Spanish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Sudanese Arabic">Sudanese Arabic</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Sundanese">Sundanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Susu">Susu</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Swahili">Swahili</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Swedish">Swedish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Sylhetti">Sylhetti</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Tagalog">Tagalog</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Taiwanese">Taiwanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Tajik">Tajik</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Tamil">Tamil</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Telugu">Telugu</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Thai">Thai</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Tibetan">Tibetan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Tigre">Tigre</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Tigrinya">Tigrinya</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Toishanese">Toishanese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Tongan">Tongan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Toucouleur">Toucouleur</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Trique">Trique</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Tshiluba">Tshiluba</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Turkish">Turkish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Twi">Twi</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Ukrainian">Ukrainian</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Urdu">Urdu</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Uyghur">Uyghur</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Uzbek">Uzbek</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Vietnamese">Vietnamese</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Visayan">Visayan</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Welsh">Welsh</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Wolof">Wolof</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Yiddish">Yiddish</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Yoruba">Yoruba</label></li>
+            <li class="checkbox keep-open"><label><input type="checkbox" name="speak" value="Yupik">Yupik</label></li>
+
+          </ul>
+        </div>
+        <div class="price">
+          <label>Lesson price:</label>
+          <textarea class="Lesson_price" rows="1" placeholder="Lesson price" style="width: 100%" id="lesson_price"></textarea>
+        </div>
+        <div class="skype">
+          <label>Skype ID:</label>
+          <textarea  rows="1" placeholder="Lesson price" style="width: 100%" id="skype_id"></textarea>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+    <div class="row about_me">
+      <div class="col-sm-6 about_me">
+        <h5 class="about_me_title">About me</h5>
+        <textarea class="about_me_txt" rows="8" placeholder="Tell us about yourself..." style="width: 100%" id="about_me"></textarea>
+      </div>
+    </div>
+
+    <div class="row about_me">
+      <div class="col-sm-6 about_me">
+        <h5 class="booked_lessons">Booked lessons</h5>
+        <ul class="list-group">
+        </ul>
+      </div>
+    </div>
+
+    <div class="row calender">
+      <div class="col-sm-10 calender">
+        <h5 class="calender_title">Calender</h5>
+        <button type="button" class="btn btn-primary arrow" id="date_left"> < </button>
+        <button type="button" class="btn btn-primary arrow" id="date_right"> > </button>
+          <table class="booking_calneder">    </table>
+
+
+
+      </div>
+
+  </div>
+
+
+    <button type="button" class="btn btn-primary" id="save_btn" data-toggle="modal" data-target="#exampleModalCenter">Save Changes</button>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+    
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            Changes saved successfully
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDK4qhU1AS70B-WRCBlj8APdydM6HqWMdw",
+      authDomain: "private-lessons-91162.firebaseapp.com",
+      databaseURL: "https://private-lessons-91162.firebaseio.com",
+      projectId: "private-lessons-91162",
+      storageBucket: "private-lessons-91162.appspot.com",
+      messagingSenderId: "248711451640",
+      appId: "1:248711451640:web:4a1c14c08f09f836f2bc0d",
+      measurementId: "G-BY1M0TGB47"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+
+  <script src="teacher.js" charset="utf-8"></script>
+</body>
+
+</html>

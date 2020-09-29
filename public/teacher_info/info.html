@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="info.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&display=swap" rel="stylesheet">
+
+  <title>teacher info</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button type="button" class="btn btn-dark" id="logout_btn">Logout</button>
+    <button type="button" class="btn btn-dark" id="edit_teacher_profile">Profile</button>
+    <a class="navbar-brand" href="#"></a>
+    <img
+      src="https://p1.hiclipart.com/preview/213/1021/220/google-logo-background-teacher-school-education-student-world-teachers-day-learning-teacher-education-png-clipart.jpg"
+      width="50" height="50" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" type="button" id="move_to_main">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="details_section">
+
+  <div class="container">
+    <h1 class="page_title">Teacher information</h1>
+    <div class="card profile_card">
+      <div class="row personal_info">
+        <div class="col-sm-6 personal_info">
+          <div class="form-check">
+            <h5 class="details" id="name_val"> </h5>
+
+          </div>
+
+          <div class="form-check">
+            <label class="details" id="homeCountry_title"> From  </label>
+            <label class="details" id="homeCountry_val"> </label>
+          </div>
+
+          <div class="form-check">
+            <label class="details" id="languages_I_teach_title"> Teaches </label>
+            <label class="details" id="languages_I_teach_val"> </label>
+          </div>
+
+          <div class="form-check">
+            <label class="details" id="also_speak_title"> Also speak </label>
+            <label class="details" id="also_speak_val"> </label>
+          </div>
+
+          <div class="form-check">
+            <label class="details" id="lessonPrice_title"> Lesson price: </label>
+            <label class="details" id="lessonPrice_val"> </label>
+          </div>
+
+          <div class="form-check">
+            <label class="details" id="skype_id_title"> Skype ID: </label>
+            <label class="details" id="skype_id_val"> </label>
+          </div>
+
+          <div class="form-check">
+            <label class="details" id="email_title"> Email: </label>
+            <label class="details" id="email_val"> </label>
+          </div>
+
+          <div class="form-check">
+            <label class="details" id="about_me_title"> About me: </label>
+            <label class="details" id="about_me_val"> </label>
+          </div>
+
+        </div>
+
+        <div class="col-sm-6 profile">
+
+          <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="card-img-top" alt="..." id="profile_img">
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="row calender">
+        <div class="col-sm-10 calender">
+          <h5 class="calender_title">Calendar</h5>
+          <button type="button" class="btn btn-primary arrow" id="date_left">
+            < </button> <button type="button" class="btn btn-primary arrow" id="date_right"> >
+          </button>
+          <table class="booking_calneder"> </table>
+
+        </div>
+      </div>
+    </div>
+
+      <button type="button" class="btn btn-primary" id="book_btn">Book</button>
+
+  </div>
+</section>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDK4qhU1AS70B-WRCBlj8APdydM6HqWMdw",
+      authDomain: "private-lessons-91162.firebaseapp.com",
+      databaseURL: "https://private-lessons-91162.firebaseio.com",
+      projectId: "private-lessons-91162",
+      storageBucket: "private-lessons-91162.appspot.com",
+      messagingSenderId: "248711451640",
+      appId: "1:248711451640:web:4a1c14c08f09f836f2bc0d",
+      measurementId: "G-BY1M0TGB47"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+
+  <script src="info.js" charset="utf-8"></script>
+
+</html>

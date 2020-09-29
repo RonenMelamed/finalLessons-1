@@ -1,0 +1,100 @@
+[1mdiff --git a/git.txt b/git.txt[m
+[1mindex 64f9e7e..ebf041b 100644[m
+[1m--- a/git.txt[m
+[1m+++ b/git.txt[m
+[36m@@ -26,6 +26,12 @@[m [mgit commit -m "added index.html"[m
+ [m
+ git push[m
+ [m
+[32m+[m[41m[m
+[32m+[m[32m-------------------------------------------------[m[41m[m
+[32m+[m[32min order to reset a file to master run the following:[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mgit checkout master main.js[m[41m[m
+[32m+[m[41m[m
+ -----------------------------------------------[m
+ [m
+ in order to show git history in a nice format:[m
+[1mdiff --git a/photos/teacher.png b/photos/teacher.png[m
+[1mdeleted file mode 100644[m
+[1mindex e0d4cdc..0000000[m
+Binary files a/photos/teacher.png and /dev/null differ
+[1mdiff --git a/teacher_page/teacher.js b/teacher_page/teacher.js[m
+[1mindex 718ce09..087bcda 100644[m
+[1m--- a/teacher_page/teacher.js[m
+[1m+++ b/teacher_page/teacher.js[m
+[36m@@ -15,6 +15,7 @@[m [mvar userEmail="";[m
+ var imageName="";[m
+ var newImageName="";[m
+ var bookedClasses;[m
+[32m+[m[32mvar bookedDates = [];[m
+ [m
+ [m
+ var weekCalenders = initWeekCalendersObjects();[m
+[36m@@ -23,6 +24,7 @@[m [mvar weekCalenderIndx = 0;[m
+ [m
+ var availableColor = "rgb(0, 153, 51)";[m
+ var notAvailablrColor = "rgb(194, 194, 163)";[m
+[32m+[m[32mvar bookedColor = "rgb(255, 204, 102)";[m
+ var userID = get_userID_from_url();[m
+ var real_upload_btn = document.getElementById("myPhoto");[m
+ [m
+[36m@@ -100,6 +102,9 @@[m [mfunction calender_btn_clicked(event){[m
+ [m
+ [m
+ [m
+[32m+[m[32m  if ($( this ).css( "background-color" ) == bookedColor)[m
+[32m+[m[32m    return;[m
+[32m+[m[41m    [m
+   var newColor = availableColor;[m
+ [m
+   if ($( this ).css( "background-color" ) == availableColor)[m
+[36m@@ -300,7 +305,14 @@[m [mfunction updateSlotsColors(){[m
+     var slot = document.getElementById(availableSlots[i])[m
+     if(slot)[m
+       slot.style.background=availableColor;[m
+[32m+[m[32m  }[m
+ [m
+[32m+[m[32m  for(var i = 0; i < bookedDates.length; i++){[m
+[32m+[m[32m    var slot = document.getElementById(bookedDates[i])[m
+[32m+[m[32m    if(slot){[m
+[32m+[m[32m      slot.innerText ="Booked";[m
+[32m+[m[32m      slot.style.background=bookedColor;[m
+[32m+[m[32m    }[m
+   }[m
+ }[m
+ [m
+[36m@@ -338,11 +350,14 @@[m [mfunction get_profile_info_from_db(data){[m
+   update_booked_classes_list();[m
+ [m
+   get_and_update_image_from_db();[m
+[32m+[m[32m  fill_booked_dates();[m
+   updateSlotsColors();[m
+   update_profile_checkboxes();[m
+ [m
+ [m
+[32m+[m
+ }[m
+[32m+[m
+ function update_booked_classes_list(){[m
+   console.log("update_booked_classes_list");[m
+   if(!bookedClasses)[m
+[36m@@ -465,4 +480,17 @@[m [mfunction update_profile_image(){[m
+   storage_ref.put(real_upload_btn.files[0]);[m
+ [m
+ [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction fill_booked_dates(){[m
+[32m+[m[32m  for(var i =0; i < bookedClasses.length; i++){[m
+[32m+[m[32m    var temp = extract_date(bookedClasses[i]);[m
+[32m+[m[32m    bookedDates.push(temp);[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction extract_date(str){[m
+[32m+[m[32m  var res = str.substring(0).split(",")[0];[m
+[32m+[m[32m  res = res.substring(0).split(" ")[1];[m
+[32m+[m[32m  return res;[m
+ }[m
+\ No newline at end of file[m

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.0 on win32)" generated="20200901 23:05:47.798" rpa="false">
+<suite id="s1" name="Login" source="C:\Git\Lessons\private-lessons-project\e2e\tests\login.robot">
+<test id="s1-t1" name="Valid Login">
+<kw name="Login" library="resource">
+<arguments>
+<arg>s@s.com</arg>
+<arg>123123</arg>
+</arguments>
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200901 23:05:48.115" level="INFO">Opening browser 'chrome' to base url 'C:/Git/Lessons/private-lessons-project/public/login/index.html'.</msg>
+<status status="PASS" starttime="20200901 23:05:48.115" endtime="20200901 23:05:52.925"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:05:52.926" endtime="20200901 23:05:52.926"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Languages</arg>
+</arguments>
+<msg timestamp="20200901 23:05:52.936" level="INFO">Page title is 'Languages'.</msg>
+<status status="PASS" starttime="20200901 23:05:52.927" endtime="20200901 23:05:52.936"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:52.927" endtime="20200901 23:05:52.936"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:48.114" endtime="20200901 23:05:52.937"></status>
+</kw>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200901 23:05:52.939" level="INFO">Typing text 's@s.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20200901 23:05:52.938" endtime="20200901 23:05:53.455"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:52.937" endtime="20200901 23:05:53.455"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200901 23:05:53.458" level="INFO">Typing text '123123' into text field 'password'.</msg>
+<status status="PASS" starttime="20200901 23:05:53.457" endtime="20200901 23:05:53.584"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:53.456" endtime="20200901 23:05:53.584"></status>
+</kw>
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${LOGIN BTN}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:05:53.585" endtime="20200901 23:05:53.600"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:05:53.601" level="INFO">Clicking button 'login_btn'.</msg>
+<status status="PASS" starttime="20200901 23:05:53.600" endtime="20200901 23:05:53.687"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:53.584" endtime="20200901 23:05:53.687"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:48.114" endtime="20200901 23:05:53.687"></status>
+</kw>
+<kw name="Main Page Should Be Open" library="resource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${LOGOUT_BTN}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:05:53.688" endtime="20200901 23:05:54.929"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:53.688" endtime="20200901 23:05:54.930"></status>
+</kw>
+<kw name="Logout" library="resource">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${LOGOUT_BTN}</arg>
+</arguments>
+<assign>
+<var>${c}</var>
+</assign>
+<msg timestamp="20200901 23:05:54.983" level="INFO">${c} = 1</msg>
+<status status="PASS" starttime="20200901 23:05:54.933" endtime="20200901 23:05:54.983"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${c}&gt;0</arg>
+<arg>Click Button Helper</arg>
+<arg>${LOGOUT_BTN}</arg>
+</arguments>
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${LOGOUT_BTN}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:05:54.986" endtime="20200901 23:05:55.003"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:05:55.005" level="INFO">Clicking button 'logout_btn'.</msg>
+<status status="PASS" starttime="20200901 23:05:55.003" endtime="20200901 23:05:55.150"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:54.985" endtime="20200901 23:05:55.150"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:54.984" endtime="20200901 23:05:55.151"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:54.931" endtime="20200901 23:05:55.151"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200901 23:05:55.152" endtime="20200901 23:05:57.544"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:48.112" endtime="20200901 23:05:57.544" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Invalid Login">
+<kw name="Login" library="resource">
+<arguments>
+<arg>s@ss.com</arg>
+<arg>123123</arg>
+</arguments>
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200901 23:05:57.549" level="INFO">Opening browser 'chrome' to base url 'C:/Git/Lessons/private-lessons-project/public/login/index.html'.</msg>
+<status status="PASS" starttime="20200901 23:05:57.548" endtime="20200901 23:06:02.382"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:06:02.382" endtime="20200901 23:06:02.383"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Languages</arg>
+</arguments>
+<msg timestamp="20200901 23:06:02.393" level="INFO">Page title is 'Languages'.</msg>
+<status status="PASS" starttime="20200901 23:06:02.384" endtime="20200901 23:06:02.393"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:06:02.383" endtime="20200901 23:06:02.394"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:57.548" endtime="20200901 23:06:02.395"></status>
+</kw>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200901 23:06:02.397" level="INFO">Typing text 's@ss.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20200901 23:06:02.397" endtime="20200901 23:06:03.007"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:06:02.396" endtime="20200901 23:06:03.008"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200901 23:06:03.010" level="INFO">Typing text '123123' into text field 'password'.</msg>
+<status status="PASS" starttime="20200901 23:06:03.009" endtime="20200901 23:06:03.149"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:06:03.008" endtime="20200901 23:06:03.149"></status>
+</kw>
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${LOGIN BTN}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:06:03.150" endtime="20200901 23:06:03.167"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:06:03.167" level="INFO">Clicking button 'login_btn'.</msg>
+<status status="PASS" starttime="20200901 23:06:03.167" endtime="20200901 23:06:03.271"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:06:03.149" endtime="20200901 23:06:03.271"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:57.547" endtime="20200901 23:06:03.272"></status>
+</kw>
+<kw name="Login error Should Be visible" library="resource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>error_msg_id</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:06:03.274" endtime="20200901 23:06:03.291"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:06:03.273" endtime="20200901 23:06:03.291"></status>
+</kw>
+<kw name="Logout" library="resource">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${LOGOUT_BTN}</arg>
+</arguments>
+<assign>
+<var>${c}</var>
+</assign>
+<msg timestamp="20200901 23:06:03.311" level="INFO">${c} = 0</msg>
+<status status="PASS" starttime="20200901 23:06:03.292" endtime="20200901 23:06:03.311"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${c}&gt;0</arg>
+<arg>Click Button Helper</arg>
+<arg>${LOGOUT_BTN}</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:06:03.312" endtime="20200901 23:06:03.313"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:06:03.291" endtime="20200901 23:06:03.313"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200901 23:06:03.314" endtime="20200901 23:06:05.772"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:05:57.547" endtime="20200901 23:06:05.772" critical="yes"></status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" starttime="20200901 23:05:47.801" endtime="20200901 23:06:05.775"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

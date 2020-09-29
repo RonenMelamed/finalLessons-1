@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.0 on win32)" generated="20200901 23:31:28.506" rpa="false">
+<suite id="s1" name="Book Lesson" source="C:\Git\Lessons\private-lessons-project\e2e\tests\book_lesson.robot">
+<test id="s1-t1" name="Book Lesson expect to pass">
+<kw name="Login" library="resource">
+<arguments>
+<arg>s@s.com</arg>
+<arg>123123</arg>
+</arguments>
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:28.847" level="INFO">Opening browser 'chrome' to base url 'C:/Git/Lessons/private-lessons-project/public/login/index.html'.</msg>
+<status status="PASS" starttime="20200901 23:31:28.847" endtime="20200901 23:31:33.558"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:33.559" endtime="20200901 23:31:33.559"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Languages</arg>
+</arguments>
+<msg timestamp="20200901 23:31:33.571" level="INFO">Page title is 'Languages'.</msg>
+<status status="PASS" starttime="20200901 23:31:33.561" endtime="20200901 23:31:33.571"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:33.560" endtime="20200901 23:31:33.572"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:28.846" endtime="20200901 23:31:33.572"></status>
+</kw>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:33.575" level="INFO">Typing text 's@s.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20200901 23:31:33.573" endtime="20200901 23:31:34.196"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:33.572" endtime="20200901 23:31:34.197"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:34.200" level="INFO">Typing text '123123' into text field 'password'.</msg>
+<status status="PASS" starttime="20200901 23:31:34.199" endtime="20200901 23:31:34.332"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:34.197" endtime="20200901 23:31:34.332"></status>
+</kw>
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${LOGIN BTN}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:34.333" endtime="20200901 23:31:34.349"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:34.349" level="INFO">Clicking button 'login_btn'.</msg>
+<status status="PASS" starttime="20200901 23:31:34.349" endtime="20200901 23:31:34.438"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:34.332" endtime="20200901 23:31:34.438"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:28.845" endtime="20200901 23:31:34.438"></status>
+</kw>
+<kw name="Main Page Should Be Open" library="resource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${LOGOUT_BTN}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:34.439" endtime="20200901 23:31:35.711"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:34.439" endtime="20200901 23:31:35.711"></status>
+</kw>
+<kw name="Select Language" library="resource">
+<arguments>
+<arg>Acholi</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${SEARCH_LANG_LIST}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:35.713" level="INFO">Selecting options from selection list 'ddl_language' by value Acholi.</msg>
+<status status="PASS" starttime="20200901 23:31:35.713" endtime="20200901 23:31:35.863"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:35.712" endtime="20200901 23:31:35.864"></status>
+</kw>
+<kw name="Select Teacher Origin" library="resource">
+<arguments>
+<arg>Afghanistan</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${SEARCH_ORIGIN_LIST}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:35.865" level="INFO">Selecting options from selection list 'ddl_origin' by value Afghanistan.</msg>
+<status status="PASS" starttime="20200901 23:31:35.865" endtime="20200901 23:31:35.965"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:35.864" endtime="20200901 23:31:35.965"></status>
+</kw>
+<kw name="Click Search Teacher Button" library="resource">
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${SEACRH_TEACHER_BTN}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:35.966" endtime="20200901 23:31:35.983"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:35.983" level="INFO">Clicking button 'searchBtn'.</msg>
+<status status="PASS" starttime="20200901 23:31:35.983" endtime="20200901 23:31:36.085"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:35.966" endtime="20200901 23:31:36.085"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:35.965" endtime="20200901 23:31:36.085"></status>
+</kw>
+<kw name="Select Teacher Profile" library="resource">
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${SEARCH_SEE_PROFILE_BTN}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:36.087" endtime="20200901 23:31:38.014"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:38.015" level="INFO">Clicking button 'lCF3MT5PhvUAJyPT4irwxNu7jok1'.</msg>
+<status status="PASS" starttime="20200901 23:31:38.015" endtime="20200901 23:31:38.698"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:36.086" endtime="20200901 23:31:38.699"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:36.086" endtime="20200901 23:31:38.699"></status>
+</kw>
+<kw name="Click Wanted Date" library="resource">
+<arguments>
+<arg>xpath://html/body/section/div/div[2]/div/div/table/tr[4]/td[4]/button</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${TEACHER_CALENDAR_TABLE}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:38.702" endtime="20200901 23:31:38.771"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10 seconds</arg>
+</arguments>
+<msg timestamp="20200901 23:31:48.773" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20200901 23:31:38.772" endtime="20200901 23:31:48.773"></status>
+</kw>
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${input_val}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:48.774" endtime="20200901 23:31:48.792"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:48.793" level="INFO">Clicking button 'xpath://html/body/section/div/div[2]/div/div/table/tr[4]/td[4]/button'.</msg>
+<status status="PASS" starttime="20200901 23:31:48.792" endtime="20200901 23:31:48.887"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:48.773" endtime="20200901 23:31:48.888"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:38.700" endtime="20200901 23:31:48.892"></status>
+</kw>
+<kw name="Click Book Lesson" library="resource">
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${BOOK_LESSON_TEAECHER_BUTTON}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:48.894" endtime="20200901 23:31:48.910"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:48.910" level="INFO">Clicking button 'book_btn'.</msg>
+<status status="PASS" starttime="20200901 23:31:48.910" endtime="20200901 23:31:49.480"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:48.894" endtime="20200901 23:31:49.483"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:48.893" endtime="20200901 23:31:49.484"></status>
+</kw>
+<kw name="Payment Page Should Be Open" library="resource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PAY_CARD_NAME_INPUT}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:49.485" endtime="20200901 23:31:49.519"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:49.484" endtime="20200901 23:31:49.519"></status>
+</kw>
+<kw name="Fill Name On Card" library="resource">
+<arguments>
+<arg>Prince</arg>
+</arguments>
+<kw name="Input helper" library="resource">
+<arguments>
+<arg>${PAY_CARD_NAME_INPUT}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${input_id}</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:49.521" endtime="20200901 23:31:49.535"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_id}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:49.536" level="INFO">Typing text 'Prince' into text field 'pay-credit-name-input'.</msg>
+<status status="PASS" starttime="20200901 23:31:49.535" endtime="20200901 23:31:49.718"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:49.521" endtime="20200901 23:31:49.719"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:49.520" endtime="20200901 23:31:49.719"></status>
+</kw>
+<kw name="Fill Email" library="resource">
+<arguments>
+<arg>p@p.com</arg>
+</arguments>
+<kw name="Input helper" library="resource">
+<arguments>
+<arg>${PAY_EMAIL_INPUT}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${input_id}</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:49.725" endtime="20200901 23:31:49.766"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_id}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:49.768" level="INFO">Typing text 'p@p.com' into text field 'pay-credit-email-input'.</msg>
+<status status="PASS" starttime="20200901 23:31:49.767" endtime="20200901 23:31:49.935"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:49.722" endtime="20200901 23:31:49.936"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:49.721" endtime="20200901 23:31:49.936"></status>
+</kw>
+<kw name="Fill Credit Card" library="resource">
+<arguments>
+<arg>1234123412341234</arg>
+</arguments>
+<kw name="Input helper" library="resource">
+<arguments>
+<arg>${PAY_CARD_NUMBER_INPUT}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${input_id}</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:49.939" endtime="20200901 23:31:49.969"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_id}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:49.969" level="INFO">Typing text '1234123412341234' into text field 'pay-credit-number-input'.</msg>
+<status status="PASS" starttime="20200901 23:31:49.969" endtime="20200901 23:31:50.123"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:49.938" endtime="20200901 23:31:50.123"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:49.937" endtime="20200901 23:31:50.123"></status>
+</kw>
+<kw name="Fill Cvc" library="resource">
+<arguments>
+<arg>234</arg>
+</arguments>
+<kw name="Input helper" library="resource">
+<arguments>
+<arg>${PAY_CARD_CVC_INPUT}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${input_id}</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:50.127" endtime="20200901 23:31:50.142"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_id}</arg>
+<arg>${input_val}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:50.143" level="INFO">Typing text '234' into text field 'pay-credit-cvc-input'.</msg>
+<status status="PASS" starttime="20200901 23:31:50.142" endtime="20200901 23:31:50.250"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:50.125" endtime="20200901 23:31:50.250"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:50.124" endtime="20200901 23:31:50.250"></status>
+</kw>
+<kw name="Click Payment Order Button" library="resource">
+<kw name="Click Button Helper" library="resource">
+<arguments>
+<arg>${PAY_ORDER_BTN}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${button_id}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200901 23:31:50.252" endtime="20200901 23:31:50.269"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_id}</arg>
+</arguments>
+<msg timestamp="20200901 23:31:50.269" level="INFO">Clicking button 'orderButton'.</msg>
+<status status="PASS" starttime="20200901 23:31:50.269" endtime="20200901 23:31:50.382"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:50.251" endtime="20200901 23:31:50.383"></status>
+</kw>
+<status status="PASS" starttime="20200901 23:31:50.251" endtime="20200901 23:31:50.383"></status>
+</kw>
+<kw name="Success Message Should Appear" library="resource">
+<msg timestamp="20200901 23:31:50.384" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" starttime="20200901 23:31:50.384" endtime="20200901 23:31:50.384"></status>
+</kw>
+<status status="FAIL" starttime="20200901 23:31:28.844" endtime="20200901 23:31:50.385" critical="yes">Keyword with same name defined multiple times.</status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" starttime="20200901 23:31:28.509" endtime="20200901 23:31:50.388"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Book Lesson">Book Lesson</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200901 23:31:28.555" level="ERROR">Error in resource file 'C:\Git\Lessons\private-lessons-project\e2e\tests\resource.robot': Creating keyword 'Success Message Should Appear' failed: Keyword with same name defined multiple times.</msg>
+</errors>
+</robot>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Resplendissant
+Description: A two-column, fixed-width template suitable for business sites and blogs.
+Version    : 1.0
+Released   : 20080116
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Languages</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="payment.css" rel="stylesheet" type="text/css" media="screen" />
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="payment.css" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+	<div id="logo">
+		<h1 id="#ProfileName1">Lesson Checkout</h1>
+		<h2>Private Lessons</h2>
+	</div>
+	<!-- start page -->
+	<div id="page">
+		<!-- start content -->
+		<div id="content">
+	
+				<section>
+					<div id="success-payment" class="alert alert-success" style="display:none">
+						<strong>Successfull payment! The lesson is booked!</strong>.
+					</div>
+					<h1 style="font-size: xx-large;">Lesson Details</h1>
+					<div class="container">
+						<div class="row">
+							<pay-det-field >Teacher Name: </pay-det-field>
+							<det-pay-result id="pay-teacher-name" >   temp dataaaaaaaa</det-pay-result>
+						</div>
+						<div class="row">
+							<pay-det-field >Teacher Email: </pay-det-field>
+							<det-pay-result id="pay-teacher-email">   temp dataaaaaaaaaaaaaaaaaaa</det-pay-result>
+						</div>
+						<div class="row">
+							<pay-det-field>Date: </pay-det-field>
+							<det-pay-result id="pay-date"> </det-pay-result>
+						</div>
+						<div class="row">
+							<pay-det-field>Time: </pay-det-field>
+							<det-pay-result id="pay-time" >  23:00</det-pay-result>
+						</div>
+						<div class="row">
+							<pay-det-field>Base Price: </pay-det-field>
+							<det-pay-result id="pay-base-price" >  100$</ddet-pay-resultiv>
+						</div>
+						<div class="row">
+							<pay-det-field>Total Price: </pay-det-field>
+							<det-pay-result id="pay-total-price">   105$</det-pay-result>
+						</div>
+					</div>
+				</section>
+
+				<section >
+					<h1 style="font-size: xx-large;">Payment Details</h1>
+					<div class="form-group row">
+						<input type="text" class="form-control" id="pay-credit-name-input" placeholder="Name on card">
+						<span style="color:red" id="pay-credit-name-err">-Name is empty-</span>
+					</div>
+					<div class="form-group row">
+						<input type="email" class="form-control" id="pay-credit-email-input" placeholder="name@example.com">
+						<span style="color:red" id="pay-credit-email-err">-Illegal email format-</span>
+					</div>
+					<div class="form-group row">
+						<input type="text" class="form-control" id="pay-credit-number-input" placeholder="1234-1234-1234-1234">
+						<span style="color:red" id="pay-credit-number-err">-Illegal car number-</span>
+					</div>
+					<h5 style="font-size: 18px;">Expiry date: </h5>
+					<div class="row">
+						<select name='expireMM' id='expireMM'>
+							<option value='01'>January</option>
+							<option value='02'>February</option>
+							<option value='03'>March</option>
+							<option value='04'>April</option>
+							<option value='05'>May</option>
+							<option value='06'>June</option>
+							<option value='07'>July</option>
+							<option value='08'>August</option>
+							<option value='09'>September</option>
+							<option value='10'>October</option>
+							<option value='11'>November</option>
+							<option value='12'>December</option>
+						</select>
+						<select name='expireYY' id='expireYY'>
+							<option value='20'>2020</option>
+							<option value='21'>2021</option>
+							<option value='22'>2022</option>
+							<option value='23'>2023</option>
+							<option value='24'>2024</option>
+							<option value='25'>2025</option>
+						</select>	
+					</div>
+					
+					<div class="form-group row">
+						<input type="text" class="form-control" id="pay-credit-cvc-input" placeholder="CVC" style="margin-top: 20px; margin-bottom: 0px;">
+						<div class="" style="color:red" id="pay-credit-cvc-err">-Illegal CVC-</div>
+					</div>
+					
+					<div class="row"><button id="orderButton" type="button" class="btn btn-success">Order</button></div>
+					
+					</form>
+				</section>
+				<section class="col-2"></section>
+
+			    <!-- Modal -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+					  <div class="modal-content">
+						<div class="modal-body">
+						  Lesson successfully booked!
+						</div>
+						<div class="modal-footer">
+						  <button type="button" id="payment-success-ok-btn" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
+			  
+		</div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDK4qhU1AS70B-WRCBlj8APdydM6HqWMdw",
+      authDomain: "private-lessons-91162.firebaseapp.com",
+      databaseURL: "https://private-lessons-91162.firebaseio.com",
+      projectId: "private-lessons-91162",
+      storageBucket: "private-lessons-91162.appspot.com",
+      messagingSenderId: "248711451640",
+      appId: "1:248711451640:web:4a1c14c08f09f836f2bc0d",
+      measurementId: "G-BY1M0TGB47"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+</body>
+<script src="payment.js" charset="utf-8"></script>
+</html>
